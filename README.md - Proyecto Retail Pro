@@ -62,7 +62,7 @@ cantidad_pedidos por cliente (para detectar recurrencia)
 Hallazgos principales:
 La facturación del mes depende al 100% de solo 5 clientes recurrentes. No hubo ni un solo cliente nuevo ni de compra única: todo el negocio se sostuvo sobre esos 5 clientes, que compraron exactamente dos veces cada uno.
 La facturación está muy concentrada en 1-2 productos, no en volumen. El resultado del mes dependió de pocas ventas de alto valor unitario, más que de una gran cantidad de unidades vendidas.
-El total facturado en el mes 3 fue de 6444 y se tuvieron 10 pedidos y el ticket promedio fue de $644.4
+El total facturado en el mes 3 fue de 6444, se tuvieron 10 pedidos y el ticket promedio fue de $644.4
 
 🚀 Instrucciones de uso / visualización
 Scripts SQL (ejecutar en SQL Server Management Studio, en este orden):
