@@ -1,0 +1,78 @@
+RetailPro - Análisis de Ventas para Empresa de Retail de Tecnología
+📌 Descripción
+RetailPro es un proyecto de análisis de datos desarrollado en el marco de un curso de Data Analytics, orientado a una empresa ficticia de Retail de Tecnología (venta de productos como notebooks, accesorios, audio y almacenamiento).
+El proyecto resuelve un problema típico de negocio: entender qué está sosteniendo la facturación mensual de la empresa a partir de sus datos de ventas, productos y clientes. A través de consultas SQL de negocio y un dashboard en Power BI, se busca responder preguntas como:
+¿Cuánto se facturó, en cuántos pedidos y con qué ticket promedio, mes a mes?
+¿Qué productos concentran mayor facturación?
+¿Los clientes que compran son recurrentes o de compra única?
+¿Qué meses estuvieron por encima o por debajo del promedio de facturación?
+
+El repositorio documenta el recorrido de dos módulos del curso (SQL y Power BI) aplicados sobre este mismo caso de negocio.
+
+🗂️ Estructura del repositorio
+Repositorio-de-Lorenzo-Calcagno/
+│
+├── Módulo_SQL/
+│   ├── Ventas_Tech_DB.sql          → Creación de la base de datos, tablas
+│   │                                  (categorías, clientes, productos, ventas)
+│   │                                  y carga de datos (RetailPro)
+│   ├── m4_consultas_negocio.sql    → Consultas de negocio: resumen ejecutivo
+│   │                                  mensual, ranking de productos, clientes
+│   │                                  recurrentes, meses por encima/debajo
+│   │                                  del promedio (RetailPro)
+│   ├── [script adicional]          → Tercer script de la práctica evaluable
+│   │                                  de RetailPro
+│   └── SQLQuery 4-08.sql           → Ejercicio no evaluable independiente
+│                                      ("Bodegas Tech") — no pertenece a RetailPro
+│
+└── Modulo_PowerBI/
+    ├── Pipeline_ETL_Lorenzo_Calcagno.pbix   → Conexión a fuente de datos Excel,
+    │                                           transformación con Power Query
+    │                                           y lenguaje M
+    └── Calcagno_Lorenzo_Checkpoint2.pbix    → Modelo en esquema estrella,
+                                                relaciones (cardinalidades),
+                                                medidas DAX y tabla calendario
+ℹ️ El archivo SQLQuery 4-08.sql corresponde a una actividad práctica no evaluable de otro proyecto ficticio ("Bodegas Tech") y no forma parte del análisis de RetailPro.
+
+📊 Origen de los datos (Datasets)
+Los datos utilizados son ficticios, provistos por los profesores del curso, y vienen predefinidos para cada actividad. El modelo de datos de RetailPro se compone de las siguientes tablas, creadas y cargadas en SQL Server mediante Ventas_Tech_DB.sql:
+Tabla de Ventas Tabla de  Hechos. Función: Registra cada operación/pedido: producto, cliente, fecha, monto, unidades
+
+Tabla de Productos Tabla de Dimensión. Función: Detalle de los productos comercializados
+
+Tabla de Clientes  Tabla de Dimensión . Función: Datos de los clientes que realizan pedidos
+
+Tabla de Categorías Tabla de Dimensión. Función: Clasificación de los productos por categoría
+
+Este mismo modelo es la base que luego se conecta y transforma en Power BI (módulo de Power Query / ETL).
+
+🛠️ Tecnologías y herramientas utilizadas
+SQL Server — motor de base de datos, ejecutado desde SQL Server Management Studio (SSMS)
+Power BI Desktop — modelado de datos y visualización
+Power Query / Lenguaje M — conexión a fuentes de datos (Excel) y transformación (ETL)
+DAX — medidas calculadas y tabla calendario, sobre un modelo en esquema estrella
+📈 Principales KPIs y hallazgos
+KPIs calculados:
+total_facturado
+cantidad_pedidos
+ticket_promedio
+unidades_vendidas
+cantidad_pedidos por cliente (para detectar recurrencia)
+
+Hallazgos principales:
+La facturación del mes depende al 100% de solo 5 clientes recurrentes. No hubo ni un solo cliente nuevo ni de compra única: todo el negocio se sostuvo sobre esos 5 clientes, que compraron exactamente dos veces cada uno.
+La facturación está muy concentrada en 1-2 productos, no en volumen. El resultado del mes dependió de pocas ventas de alto valor unitario, más que de una gran cantidad de unidades vendidas.
+El total facturado en el mes 3 fue de 6444 y se tuvieron 10 pedidos y el ticket promedio fue de $644.4
+
+🚀 Instrucciones de uso / visualización
+Scripts SQL (ejecutar en SQL Server Management Studio, en este orden):
+Abrir Ventas_Tech_DB.sql y ejecutarlo para: crear la base de datos → crear las tablas (categorías, clientes, productos, ventas) → insertar los datos.
+Abrir y ejecutar m4_consultas_negocio.sql para correr las consultas de negocio (resumen ejecutivo mensual, ranking de productos, clientes recurrentes, comparación contra el promedio mensual).
+Abrir y ejecutar m5_consultas_joins.sql para correr las consultas de negocio enriquecidas a través del uso de JOINS obteniendo datos como : ventas con nombre de cliente, nombre de producto, categoría y región en una sola consulta además de saber qué clientes nunca compraron y qué artículos del catálogo no tienen movimiento
+Los scripts se encuentran dentro de la carpeta Módulo_SQL/ del repositorio; se abren descargándolos o visualizándolos directamente desde GitHub.
+Archivos de Power BI:
+Ingresar a la carpeta Modulo_PowerBI/ del repositorio.
+Abrir el archivo .pbix deseado y descargarlo usando la opción "View raw".
+El archivo llamado Pipeline_ETL_Lorenzo_Calcagno.pbix es el que corresponde al uso de Power Query y Lenguaje M mientras que el de nombre Calcagno_Lorenzo_Checkpoint2.pbix es el que corresponde a la práctica de las Relaciones (cardinalidades) y Esquema Estrella y cálculos DAX
+Abrirlo con Power BI Desktop (versión actualizada).
+
