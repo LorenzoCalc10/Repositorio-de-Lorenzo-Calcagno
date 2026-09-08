@@ -36,13 +36,14 @@ Repositorio-de-Lorenzo-Calcagno/
 
 📊 Origen de los datos (Datasets)
 Los datos utilizados son ficticios, provistos por los profesores del curso, y vienen predefinidos para cada actividad. El modelo de datos de RetailPro se compone de las siguientes tablas, creadas y cargadas en SQL Server mediante Ventas_Tech_DB.sql:
-Tabla de Ventas Tabla de  Hechos. Función: Registra cada operación/pedido: producto, cliente, fecha, monto, unidades
 
-Tabla de Productos Tabla de Dimensión. Función: Detalle de los productos comercializados
+Tabla de Ventas (Tabla de  Hechos). Función: Registra cada operación/pedido: producto, cliente, fecha, monto, unidades
 
-Tabla de Clientes  Tabla de Dimensión . Función: Datos de los clientes que realizan pedidos
+Tabla de Productos (Tabla de Dimensión). Función: Detalle de los productos comercializados
 
-Tabla de Categorías Tabla de Dimensión. Función: Clasificación de los productos por categoría
+Tabla de Clientes  (Tabla de Dimensión) . Función: Datos de los clientes que realizan pedidos
+
+Tabla de Categorías (Tabla de Dimensión). Función: Clasificación de los productos por categoría
 
 Este mismo modelo es la base que luego se conecta y transforma en Power BI (módulo de Power Query / ETL).
 
@@ -51,6 +52,7 @@ SQL Server — motor de base de datos, ejecutado desde SQL Server Management Stu
 Power BI Desktop — modelado de datos y visualización
 Power Query / Lenguaje M — conexión a fuentes de datos (Excel) y transformación (ETL)
 DAX — medidas calculadas y tabla calendario, sobre un modelo en esquema estrella
+
 📈 Principales KPIs y hallazgos
 KPIs calculados:
 total_facturado
