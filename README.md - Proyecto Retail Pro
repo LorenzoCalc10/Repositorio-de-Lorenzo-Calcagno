@@ -45,6 +45,8 @@ Tabla de Clientes  (Tabla de Dimensión) . Función: Datos de los clientes que r
 
 Tabla de Categorías (Tabla de Dimensión). Función: Clasificación de los productos por categoría
 
+Tabla de Territorios (Tabla de Dimensión). Función:Detalle de los territorios dónde ocurren las ventas
+
 Este mismo modelo es la base que luego se conecta y transforma en Power BI (módulo de Power Query / ETL).
 
 🛠️ Tecnologías y herramientas utilizadas
