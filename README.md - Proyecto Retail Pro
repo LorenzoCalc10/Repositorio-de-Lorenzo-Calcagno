@@ -70,6 +70,7 @@ Abrir Ventas_Tech_DB.sql y ejecutarlo para: crear la base de datos → crear las
 Abrir y ejecutar m4_consultas_negocio.sql para correr las consultas de negocio (resumen ejecutivo mensual, ranking de productos, clientes recurrentes, comparación contra el promedio mensual).
 Abrir y ejecutar m5_consultas_joins.sql para correr las consultas de negocio enriquecidas a través del uso de JOINS obteniendo datos como : ventas con nombre de cliente, nombre de producto, categoría y región en una sola consulta además de saber qué clientes nunca compraron y qué artículos del catálogo no tienen movimiento
 Los scripts se encuentran dentro de la carpeta Módulo_SQL/ del repositorio; se abren descargándolos o visualizándolos directamente desde GitHub.
+
 Archivos de Power BI:
 Ingresar a la carpeta Modulo_PowerBI/ del repositorio.
 Abrir el archivo .pbix deseado y descargarlo usando la opción "View raw".
